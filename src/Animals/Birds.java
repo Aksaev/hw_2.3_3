@@ -9,11 +9,6 @@ public class Birds extends Animals {
         this.habitat = habitat;
     }
 
-    // Метод Охотиться
-    public void hunting() {
-
-    }
-
     @Override
     public void eat() {
 

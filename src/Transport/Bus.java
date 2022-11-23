@@ -14,15 +14,15 @@ public class Bus extends Transport {
 
     @Override
     public void refil() {
-        System.out.println("Автобус нужно заправлять " + this.fuelType);
+        System.out.printf("  Автобус %s нужно заправлять %s. \n", getModel(), this.fuelType);
     }
 
     @Override
     protected String checkFuelType(String fuelType) {
-        if ("Дизель".contains(fuelType)) {
-            return "дизелем";
-        } else {
+        if ("Бензин".contains(fuelType)) {
             return "бензином";
+        } else {
+            return "дизелем";
         }
     }
 
@@ -33,8 +33,7 @@ public class Bus extends Transport {
                 "  - Цвет: " + getColor() + "\n" +
                 "  - Год выпуска: " + getProductionYear() + "\n" +
                 "  - Страна производства: " + getProductionCountry() + "\n" +
-                "  - Скорость передвежения: " + getSpeed() + " км/ч" + "\n" +
-                "  - Тип топлива: " + checkFuelType(fuelType);
+                "  - Скорость передвежения: " + getSpeed() + " км/ч";
     }
 
 

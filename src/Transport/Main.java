@@ -4,9 +4,9 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car(
+        Car ladaGranta = new Car(
                 "Lada",
-                "Grande",
+                "Granta",
                 2018,
                 "Россия",
                 "Желтый",
@@ -21,27 +21,98 @@ public class Main {
                 new Car.Key(true, true),
                 new Car.Insurance(LocalDate.now().plusMonths(3), 1000.0f, "123456789")
         );
-//        Transport.Car audiA8 = new Transport.Car("Audi", "A8 50 L TDI quattro", 2020, "Германия", "Черный", 3.0);
-//        Transport.Car bmwZ8 = new Transport.Car("BMW", "Z8", 2021, "Германия", "Черный", 3.0);
-//        Transport.Car kiaSportage4 = new Transport.Car("Kia", "Sportage 4", 2018, "Южная Корея", "Красный", 2.4);
-//        Transport.Car hyundaiAvante = new Transport.Car("Hyundai", "Avante", 2016, "Южная Корея", "Оранжевый", 1.6);
 
-        System.out.println("Урок 2.3 ООП. Домашнее задание.");
+        Car audiA8 = new Car(
+                "Audi",
+                "A8 50 L TDI quattro",
+                2020,
+                "Германия",
+                "Черный",
+                250,
+                "Дизель",
+                3.0,
+                "АКПП",
+                "Седан",
+                "Б002АА163",
+                5,
+                true,
+                new Car.Key(true, true),
+                new Car.Insurance(LocalDate.now().plusMonths(3), 2000.0f, "223344550"));
+
+        Car bmwZ8 = new Car(
+                "BMW",
+                "Z8",
+                2021,
+                "Германия",
+                "Черный",
+                200,
+                "Дизель",
+                2.0,
+                "АКПП",
+                "Седан",
+                "В144РА799",
+                4,
+                false,
+                new Car.Key(true, true),
+                new Car.Insurance(LocalDate.now().plusMonths(3), 1500.0f, "203040599"));
+
+        Car kiaSportage4 = new Car(
+                "Kia",
+                "Sportage 4",
+                2018,
+                "Южная Корея",
+                "Красный",
+                250,
+                "Бензин",
+                2.4,
+                "АКПП",
+                "Кроссовер",
+                "П568ГГ187",
+                5,
+                false,
+                new Car.Key(true, true),
+                new Car.Insurance(LocalDate.now().plusMonths(3), 5000.0f, "100005678"));
+
+        Car hyundaiAvante = new Car(
+                "Hyundai",
+                "Avante",
+                2016,
+                "Южная Корея",
+                "Оранжевый",
+                180,
+                "Бензин",
+                1.6,
+                "МКПП",
+                "Седан",
+                "О848МР777",
+                4,
+                true,
+                new Car.Key(true, true),
+                new Car.Insurance(LocalDate.now().plusMonths(3), 1000.0f, "220004587"));
 
         System.out.println("--- Class Transport.Car ---");
-        System.out.println(car);
-        car.refil();
 
-//        System.out.println(audiA8);
-//        System.out.println(bmwZ8);
-//        System.out.println(kiaSportage4);
-//        System.out.println(hyundaiAvante);
+        System.out.println(ladaGranta);
+        ladaGranta.refil();
+        if (!ladaGranta.getInsurance().isInsuranceValid()) { System.out.println("  Строховка просрочена!"); }
 
-        if (!car.getInsurance().isInsuranceValid()) {
-            System.out.println("Строховка просрочена!");
-        }
+        System.out.println(audiA8);
+        audiA8.refil();
+        if (!audiA8.getInsurance().isInsuranceValid()) { System.out.println("  Строховка просрочена!"); }
 
-        System.out.println("--- Class Transport.Train ---");
+        System.out.println(bmwZ8);
+        bmwZ8.refil();
+        if (!bmwZ8.getInsurance().isInsuranceValid()) { System.out.println("  Строховка просрочена!"); }
+
+        System.out.println(kiaSportage4);
+        kiaSportage4.refil();
+        if (!kiaSportage4.getInsurance().isInsuranceValid()) { System.out.println("  Строховка просрочена!"); }
+
+        System.out.println(hyundaiAvante);
+        hyundaiAvante.refil();
+        if (!hyundaiAvante.getInsurance().isInsuranceValid()) { System.out.println("  Строховка просрочена!"); }
+
+        System.out.println("\n--- Class Transport.Train ---");
 
         Train trainSwallow = new Train(
                 "Поезд Ласточка",
@@ -72,10 +143,11 @@ public class Main {
                 8);
 
         System.out.println(trainSwallow);
+        trainSwallow.refil();
         System.out.println(trainLeningrad);
         trainLeningrad.refil();
 
-        System.out.println("--- Class Transport.Bus ---");
+        System.out.println("\n--- Class Transport.Bus ---");
 
         Bus busOne = new Bus(
                 "Газель",
@@ -105,7 +177,9 @@ public class Main {
                 "Дизель");
 
         System.out.println(busOne);
+        busOne.refil();
         System.out.println(busTwo);
+        busTwo.refil();
         System.out.println(busThree);
         busThree.refil();
 

@@ -8,14 +8,9 @@ public class Predators extends Mammals {
         this.typeFood = typeFood;
     }
 
-    // Метод Охотиться
-    public void hunting() {
-
-    }
-
     @Override
     public void eat() {
-
+        System.out.printf("%s охотиться на %s.\n", this.getName(), this.typeFood);
     }
 
     @Override

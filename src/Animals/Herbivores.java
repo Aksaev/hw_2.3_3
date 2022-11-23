@@ -11,11 +11,6 @@ public class Herbivores extends Mammals {
         this.typeFood = typeFood;
     }
 
-    // Метод Пастись
-    public void grazing() {
-        System.out.printf("%s пасется на %s\n", this.getName(), this.typeFood);
-    }
-
     @Override
     public void eat() {
 
@@ -23,7 +18,7 @@ public class Herbivores extends Mammals {
 
     @Override
     public void go() {
-
+        System.out.printf("%s пасется в %s.\n", this.getName(), this.habitat);
     }
 
     @Override

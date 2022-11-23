@@ -71,7 +71,7 @@ public class Train extends Transport {
 
     @Override
     public void refil() {
-        System.out.println("Поезд нужно заправлять " + this.fuelType);
+        System.out.printf("  Поезд %s нужно заправлять %s. \n", getModel(), this.fuelType);
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.util.Objects;
 
 // Класс Млекопитающие
 public abstract class Mammals extends Animals {
-    private final String habitat; // Среда проживания
+    final String habitat; // Среда проживания
     private final int speedMovement; // Скорость перемещения
 
     public Mammals(String name, int numYears, String habitat, int speedMovement) {

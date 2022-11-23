@@ -134,7 +134,7 @@ public class Car extends Transport {
 
     @Override
     public void refil() {
-        System.out.println("Автомобиль нужно заправлять " + this.fuelType);
+        System.out.printf("  Автомобиль %s %s нужно заправлять %s. \n", getBrand(), getModel(), this.fuelType);
     }
 
     @Override
@@ -142,7 +142,7 @@ public class Car extends Transport {
         if ("Бензин".contains(fuelType)) {
             return "бензином";
         } else {
-            return fuelType;
+            return "дизелем";
         }
     }
 

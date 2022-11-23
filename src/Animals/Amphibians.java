@@ -11,14 +11,9 @@ public class Amphibians extends Animals {
         this.habitat = habitat;
     }
 
-    // Метод Охотиться
-    public void hunting() {
-        System.out.printf("%s охотиться на %s.\n", this.getName(), this.habitat);
-    }
-
     @Override
     public void eat() {
-
+        System.out.printf("%s охотиться на %s.\n", this.getName(), this.habitat);
     }
 
     @Override

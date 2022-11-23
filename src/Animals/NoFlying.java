@@ -9,11 +9,6 @@ public class NoFlying extends Birds {
         this.typeMovement = typeMovement;
     }
 
-    // Метод гулять
-    public void walk() {
-
-    }
-
     @Override
     public void eat() {
 
@@ -21,7 +16,7 @@ public class NoFlying extends Birds {
 
     @Override
     public void go() {
-
+        System.out.printf("%s гуляет по %s.\n", this.getName(), this.typeMovement);
     }
 
     public String getTypeMovement() {

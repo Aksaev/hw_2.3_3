@@ -9,11 +9,6 @@ public class Flying extends Birds {
         this.typeMovement = typeMovement;
     }
 
-    // Метод Летать
-    public void toFly() {
-
-    }
-
     @Override
     public void eat() {
 
@@ -21,7 +16,7 @@ public class Flying extends Birds {
 
     @Override
     public void go() {
-
+        System.out.printf("%s летает %s.\n", this.getName(), this.typeMovement);
     }
 
     public String getTypeMovement() {
