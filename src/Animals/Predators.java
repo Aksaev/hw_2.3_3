@@ -15,7 +15,7 @@ public class Predators extends Mammals {
 
     @Override
     public void go() {
-
+        System.out.printf("%s гуляет %s.\n", this.getName(), this.habitat);
     }
 
     public String getTypeFood() {

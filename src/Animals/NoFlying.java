@@ -4,6 +4,7 @@ package Animals;
 public class NoFlying extends Birds {
     private String typeMovement; // Тип передвижения
 
+
     public NoFlying(String name, int numYears, String habitat, String typeMovement) {
         super(name, numYears, habitat);
         this.typeMovement = typeMovement;
@@ -11,7 +12,7 @@ public class NoFlying extends Birds {
 
     @Override
     public void eat() {
-
+        System.out.printf("%s питается насекомыми и рыбой.\n", this.getName());
     }
 
     @Override

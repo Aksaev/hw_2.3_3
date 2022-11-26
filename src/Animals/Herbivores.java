@@ -13,7 +13,7 @@ public class Herbivores extends Mammals {
 
     @Override
     public void eat() {
-
+        System.out.printf("%s питается %s.\n", this.getName(), this.typeFood);
     }
 
     @Override

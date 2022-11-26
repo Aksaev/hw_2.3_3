@@ -13,12 +13,12 @@ public class Amphibians extends Animals {
 
     @Override
     public void eat() {
-        System.out.printf("%s охотиться на %s.\n", this.getName(), this.habitat);
+        System.out.printf("%s обитает %s. \n", this.getName(), this.habitat);
     }
 
     @Override
     public void go() {
-
+        System.out.printf("%s охотиться на насекомых и рыбу.\n", this.getName());
     }
 
     @Override

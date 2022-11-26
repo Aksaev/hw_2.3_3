@@ -11,7 +11,7 @@ public class Flying extends Birds {
 
     @Override
     public void eat() {
-
+        System.out.printf("%s питается насекомыми и рыбой.\n", this.getName());
     }
 
     @Override
